@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer {
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 60vw;
+  height: 60vh;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("./img/background-gif4.gif");
+  background-repeat: no-repeat;
+  background-size: 60vw 43vh;
+
+
+  .subContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    grid-template-areas: 
+    ". title title title ."
+    ". playerTxt text computerTxt ."
+    ". playerChar . computerChar ."
+    ". playerChar . computerChar ."
+    ". playerChar . computerChar ."
+    ". playerOutcome . computerOutcome ."
+    ". movesBtn . resetBtn .";
+
+    #title {
+      grid-area: title;
+      margin: 10px;
+      padding: 10px;
+      color: rgb(218, 134, 134);
+    }
+  
+    #playerTxt {
+      grid-area: playerTxt;
+      color: white;
+      margin: 10px;
+    }
+    
+    #text {
+      grid-area: text;
+      color: white;
+    }
+
+    #computerTxt {
+      grid-area: computerTxt;
+      color: white;
+      margin: 10px;
+    }
+    
+    #playerChar {
+      grid-area: playerChar;
+    }
+
+    #computerChar {
+      grid-area: computerChar;
+
+      #kick {
+        width: 140px;
+      }
+      #grapple {
+        width: 140px;
+      }
+      #punch{
+        width: 140px;
+      }
+    }
+
+    .character {
+      width: 130px;
+    }
+
+    #playerOutcome {
+      grid-area: playerOutcome;
+      margin: 10px;
+      padding: 10px;
+      color: white;
+    }
+
+    #computerOutcome {
+      grid-area: computerOutcome;
+      margin: 10px;
+      padding: 10px;
+      color: white;
+    }
+
+
+    #movesBtn {
+      grid-area: movesBtn;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2px;
+      margin: 20px;
+    }
+
+    #resetBtn {
+      grid-area: resetBtn;
+
+      button {
+        margin-top: 20px;
+      }
+    }
+
+
+
+  }
+
+}
+

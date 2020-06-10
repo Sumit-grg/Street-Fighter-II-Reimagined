@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer {
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 60vw;
+  height: 60vh;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("./img/background-gif4.gif");
+  background-repeat: no-repeat;
+  background-size: 60vw 43vh;
+}
+
+.mainContainer .subContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+      grid-template-areas: ". title title title ." ". playerTxt text computerTxt ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerOutcome . computerOutcome ." ". movesBtn . resetBtn .";
+}
+
+.mainContainer .subContainer #title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  margin: 10px;
+  padding: 10px;
+  color: #da8686;
+}
+
+.mainContainer .subContainer #playerTxt {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: playerTxt;
+  color: white;
+  margin: 10px;
+}
+
+.mainContainer .subContainer #text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: text;
+  color: white;
+}
+
+.mainContainer .subContainer #computerTxt {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: computerTxt;
+  color: white;
+  margin: 10px;
+}
+
+.mainContainer .subContainer #playerChar {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: playerChar;
+}
+
+.mainContainer .subContainer #computerChar {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: computerChar;
+}
+
+.mainContainer .subContainer #computerChar #kick {
+  width: 140px;
+}
+
+.mainContainer .subContainer #computerChar #grapple {
+  width: 140px;
+}
+
+.mainContainer .subContainer #computerChar #punch {
+  width: 140px;
+}
+
+.mainContainer .subContainer .character {
+  width: 130px;
+}
+
+.mainContainer .subContainer #playerOutcome {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: playerOutcome;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.mainContainer .subContainer #computerOutcome {
+  -ms-grid-row: 6;
+  -ms-grid-column: 4;
+  grid-area: computerOutcome;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.mainContainer .subContainer #movesBtn {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: movesBtn;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 2px;
+  margin: 20px;
+}
+
+.mainContainer .subContainer #resetBtn {
+  -ms-grid-row: 7;
+  -ms-grid-column: 4;
+  grid-area: resetBtn;
+}
+
+.mainContainer .subContainer #resetBtn button {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=style.css.map */
