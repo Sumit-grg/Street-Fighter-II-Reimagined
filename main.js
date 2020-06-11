@@ -27,6 +27,12 @@ const computerGrapple = `<img src="https://media.giphy.com/media/SWbw5GrPSt9uPAV
 const computerBlock = `<img src="https://media.giphy.com/media/d7qpmxU8V03e3fm6rk/giphy.gif" class="character" id="block">`;
 const computerStance = `<img src="./character animation/computer-stance-loop.gif"  class="character" alt="stance" id="computerStance">`;
 
+const playerWin = `<img src="./character animation/player-win-loop.gif"  class="character" alt="stance" id="playerWin">`;
+const playerLose = `<img src="./character animation/player-lose.gif"  class="character" alt="stance" id="playerLose">`;
+const computerWin = `<img src="./character animation/computer-win-loop.gif"  class="character" alt="stance" id="computerWin">`;
+const computerLose = `<img src="./character animation/computer-lose.gif"  class="character" alt="stance" id="computerLose">`;
+
+
 const array1 = [computerPunch, computerKick, computerGrapple, computerBlock];
 
 let playerScore = 0;
@@ -78,7 +84,7 @@ choiceKick.addEventListener("click", function() {
     playerOutcome.innerHTML = draw;
     computerOutcome.innerHTML = draw;
   }
-
+ 
   document.getElementById("playerScore").innerHTML = playerScore;
   document.getElementById("computerScore").innerHTML = computerScore;
 });
@@ -104,7 +110,7 @@ choiceGrapple.addEventListener("click", function() {
     computerOutcome.innerHTML = lose;
     playerScore++;
   }
- 
+
   document.getElementById("playerScore").innerHTML = playerScore;
   document.getElementById("computerScore").innerHTML = computerScore;
 });
@@ -139,6 +145,17 @@ resetBtn.addEventListener("click", function() {
   playerChar.innerHTML = playerStance;
   computerChar.innerHTML = computerStance;
 });
+
+
+if (document.getElementById("playerScore") >= 2) {
+  playerChar.innerHTML = playerWin;
+  computerChar.innerHTML = computerLose;
+} else if (document.getElementById("computerScore") >= 2) {
+  playerChar.innerHTML = playerLose;
+  computerChar.innerHTML = computerWin;
+  };
+
+
 
 
 // const scoreCounter = function score(){
