@@ -39,9 +39,9 @@ let playerScore = 0;
 let computerScore = 0;
 
 choicePunch.addEventListener("click", function() {
-  audio.innerHTML = `<audio id="myAudio" autoplay>
-  <source src="./character animation/trailer/3.mp3" type="audio/mpeg">   
-</audio>`
+//   audio.innerHTML = `<audio id="myAudio" autoplay>
+//   <source src="./character animation/trailer/3.mp3" type="audio/mpeg">   
+// </audio>`
   playerChar.innerHTML = playerPunch;
   computerChar.innerHTML = array1[Math.floor(Math.random() * array1.length)];
   
@@ -146,14 +146,16 @@ resetBtn.addEventListener("click", function() {
   computerChar.innerHTML = computerStance;
 });
 
-
-if (document.getElementById("playerScore") >= 2) {
+const winner = function () {
+if (document.getElementById("playerScore") === 2) {
   playerChar.innerHTML = playerWin;
   computerChar.innerHTML = computerLose;
-} else if (document.getElementById("computerScore") >= 2) {
+} else if (document.getElementById("computerScore") === 2) {
   playerChar.innerHTML = playerLose;
   computerChar.innerHTML = computerWin;
-  };
+  }
+};
+
 
 
 
