@@ -21,7 +21,7 @@
   display: grid;
   -ms-grid-columns: 1fr 2fr 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-      grid-template-areas: ". title title title ." ". playerTxt text computerTxt ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerOutcome . computerOutcome ." ". movesBtn . resetBtn .";
+      grid-template-areas: ". title title title ." ". playerTxt text computerTxt ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerOutcome . computerOutcome ." ". movesBtn . startBtn resetBtn";
 }
 
 .mainContainer .subContainer #title {
@@ -133,7 +133,7 @@
 
 .mainContainer #resetBtn {
   -ms-grid-row: 7;
-  -ms-grid-column: 4;
+  -ms-grid-column: 5;
   grid-area: resetBtn;
   border-radius: 20px;
   width: 80px;
@@ -151,5 +151,37 @@
   background-color: brown;
   -webkit-box-shadow: 2px 2px black;
           box-shadow: 2px 2px black;
+}
+
+.mainContainer #startBtn {
+  -ms-grid-row: 7;
+  -ms-grid-column: 4;
+  grid-area: startBtn;
+  border-radius: 20px;
+  width: 80px;
+  height: 50px;
+  background-color: #d7bbbb;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mainContainer #startBtn:hover {
+  cursor: pointer;
+  background-color: brown;
+  -webkit-box-shadow: 2px 2px black;
+          box-shadow: 2px 2px black;
+}
+
+.mainContainer #document {
+  grid-area: doc;
+}
+
+.mainContainer #document img {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */

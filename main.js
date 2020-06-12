@@ -39,9 +39,6 @@ let playerScore = 0;
 let computerScore = 0;
 
 choicePunch.addEventListener("click", function() {
-//   audio.innerHTML = `<audio id="myAudio" autoplay>
-//   <source src="./character animation/trailer/3.mp3" type="audio/mpeg">   
-//</audio>`
   playerChar.innerHTML = playerPunch;
   computerChar.innerHTML = array1[Math.floor(Math.random() * array1.length)];
   
@@ -62,6 +59,14 @@ choicePunch.addEventListener("click", function() {
 
   document.getElementById("playerScore").innerHTML = playerScore;
   document.getElementById("computerScore").innerHTML = computerScore; 
+
+  if (playerScore === 5){
+    playerChar.innerHTML = playerWin;
+    computerChar.innerHTML = computerLose;
+  } else if (computerScore === 5) {
+    computerChar.innerHTML = computerWin;
+    playerChar.innerHTML = playerLose;
+  }
 });
 
 
@@ -87,6 +92,14 @@ choiceKick.addEventListener("click", function() {
 
   document.getElementById("playerScore").innerHTML = playerScore;
   document.getElementById("computerScore").innerHTML = computerScore;
+  
+  if (playerScore === 5){
+    playerChar.innerHTML = playerWin;
+    computerChar.innerHTML = computerLose;
+  } else if (computerScore === 5) {
+    computerChar.innerHTML = computerWin;
+    playerChar.innerHTML = playerLose;
+  }
 });
 
 
@@ -113,6 +126,14 @@ choiceGrapple.addEventListener("click", function() {
 
   document.getElementById("playerScore").innerHTML = playerScore;
   document.getElementById("computerScore").innerHTML = computerScore;
+
+  if (playerScore === 5){
+    playerChar.innerHTML = playerWin;
+    computerChar.innerHTML = computerLose;
+  } else if (computerScore === 5) {
+    computerChar.innerHTML = computerWin;
+    playerChar.innerHTML = playerLose;
+  }
 });
 
 choiceBlock.addEventListener("click", function() {
@@ -136,29 +157,49 @@ choiceBlock.addEventListener("click", function() {
   
   document.getElementById("playerScore").innerHTML = playerScore;
   document.getElementById("computerScore").innerHTML = computerScore;
+
+  if (playerScore === 5){
+    playerChar.innerHTML = playerWin;
+    computerChar.innerHTML = computerLose;
+  } else if (computerScore === 5) {
+    computerChar.innerHTML = computerWin;
+    playerChar.innerHTML = playerLose;
+  }
 });
 
+document.getElementById("playerScore").innerHTML = playerScore;
+document.getElementById("computerScore").innerHTML = computerScore;
 
 resetBtn.addEventListener("click", function() {
-  document.getElementById("playerScore").innerHTML = 0;
-  document.getElementById("computerScore").innerHTML = 0;
+  playerScore = 0;
+  computerScore = 0;
   playerChar.innerHTML = playerStance;
   computerChar.innerHTML = computerStance;
   playerOutcome.innerHTML = "";
   computerOutcome.innerHTML = "";
 });
 
-const winner = function () {
-if (document.getElementById("playerScore") === 2) {
-  playerChar.innerHTML = playerWin;
-  computerChar.innerHTML = computerLose;
-} else if (document.getElementById("computerScore") === 2) {
-  playerChar.innerHTML = playerLose;
-  computerChar.innerHTML = computerWin;
-  }
-};
+// const winner = function () {
+// if (document.getElementById("playerScore") === 2) {
+//   playerChar.innerHTML = playerWin;
+//   computerChar.innerHTML = computerLose;
+// } else if (document.getElementById("computerScore") === 2) {
+//   playerChar.innerHTML = playerLose;
+//   computerChar.innerHTML = computerWin;
+//   }
+// };
 
 
+const startBtn = document.getElementById("startBtn");
+
+startBtn.addEventListener("click", function(){
+  document.getElementById("title").innerHTML = `<h1>Untitled Game (TBA)</h1>`;
+  });
+
+//   document.getElementById("playerTxt").innerHTML = `<h2>Player</h2>`;
+//   document.getElementById("computerTxt").innerHTML = "<h2>Computer</h2>";
+//   document.getElementById("playerScore").innerHTML = 0;
+//   document.getElementById("computerScore").innerHTML = 0;
 
 
 
