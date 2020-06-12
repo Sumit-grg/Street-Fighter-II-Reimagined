@@ -28,6 +28,7 @@
     ". playerOutcome . computerOutcome ."
     ". movesBtn . startBtn resetBtn"
     // ". doc doc doc ."
+    ". . . audio ."
     ;
 
     #title {
@@ -154,6 +155,11 @@
         background-color: black;
       }
 
+    }
+    #audioLevel {
+      grid-area: audio;
+      width: 200px;
+      height: 20px;
     }
   }
 

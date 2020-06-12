@@ -181,6 +181,20 @@ resetBtn.addEventListener("click", function() {
 
 });
 
+const audioLevel = document.getElementById("audioLevel");
+audio.volume = 0.1;
+
+const startBtn = document.getElementById("startBtn");
+
+startBtn.addEventListener("click", function(){
+  document.getElementById("title").innerHTML = `<h1>Untitled Game (TBA)</h1>`;
+});
+
+//   document.getElementById("playerTxt").innerHTML = `<h2>Player</h2>`;
+//   document.getElementById("computerTxt").innerHTML = "<h2>Computer</h2>";
+//   document.getElementById("playerScore").innerHTML = 0;
+//   document.getElementById("computerScore").innerHTML = 0;
+
 // const winner = function () {
 // if (document.getElementById("playerScore") === 2) {
 //   playerChar.innerHTML = playerWin;
@@ -192,23 +206,10 @@ resetBtn.addEventListener("click", function() {
 // };
 
 
-const startBtn = document.getElementById("startBtn");
-
-startBtn.addEventListener("click", function(){
-  document.getElementById("title").innerHTML = `<h1>Untitled Game (TBA)</h1>`;
-  });
-
-//   document.getElementById("playerTxt").innerHTML = `<h2>Player</h2>`;
-//   document.getElementById("computerTxt").innerHTML = "<h2>Computer</h2>";
-//   document.getElementById("playerScore").innerHTML = 0;
-//   document.getElementById("computerScore").innerHTML = 0;
-
-
-
 // const scoreCounter = function score(){
-//   if(playerOutcome === win){
-//     playerScore++;
-//   } else if (computerOutcome === win) {
-//     computerScore++;
-//   }
-// }
+  //   if(playerOutcome === win){
+    //     playerScore++;
+    //   } else if (computerOutcome === win) {
+      //     computerScore++;
+      //   }
+      // }
