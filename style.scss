@@ -93,21 +93,37 @@
       grid-area: movesBtn;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 2px;
+      grid-gap: 4px;
       margin: 20px;
+      justify-self: center;
+      }
+
+      .moveBtn {
+        border-radius: 5px;
+        width: 100px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: lightgray;
+          box-shadow: 1px 1px black;
+        }
+      }
+      
     }
 
     #resetBtn {
       grid-area: resetBtn;
-      margin-top: 20px;
       border-radius: 20px;
-      width: 100px;
+      width: 80px;
+      height: 50px;
       background-color: rgb(215, 187, 187);
+      justify-self: center;
+      align-self: center;
 
       &:hover {
         cursor: pointer;
         background-color: brown;
-        box-shadow: 2px 2px rgb(172, 115, 115);
+        box-shadow: 2px 2px black;
       }
     }
 
@@ -115,5 +131,5 @@
 
   }
 
-}
+
 

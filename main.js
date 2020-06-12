@@ -41,7 +41,7 @@ let computerScore = 0;
 choicePunch.addEventListener("click", function() {
 //   audio.innerHTML = `<audio id="myAudio" autoplay>
 //   <source src="./character animation/trailer/3.mp3" type="audio/mpeg">   
-// </audio>`
+//</audio>`
   playerChar.innerHTML = playerPunch;
   computerChar.innerHTML = array1[Math.floor(Math.random() * array1.length)];
   
@@ -84,7 +84,7 @@ choiceKick.addEventListener("click", function() {
     playerOutcome.innerHTML = draw;
     computerOutcome.innerHTML = draw;
   }
- 
+
   document.getElementById("playerScore").innerHTML = playerScore;
   document.getElementById("computerScore").innerHTML = computerScore;
 });
@@ -144,6 +144,8 @@ resetBtn.addEventListener("click", function() {
   document.getElementById("computerScore").innerHTML = 0;
   playerChar.innerHTML = playerStance;
   computerChar.innerHTML = computerStance;
+  playerOutcome.innerHTML = "";
+  computerOutcome.innerHTML = "";
 });
 
 const winner = function () {
