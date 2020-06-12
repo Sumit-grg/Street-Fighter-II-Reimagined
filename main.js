@@ -177,7 +177,7 @@ resetBtn.addEventListener("click", function() {
   computerChar.innerHTML = computerStance;
   playerOutcome.innerHTML = "";
   computerOutcome.innerHTML = "";
-  document.getElementById("title").innerHTML = `<img src="./img/document.png" alt="document" width="300px">`;
+  document.getElementById("title").innerHTML = `<img src="./img/document.png" alt="document" width="400px">`;
 
 });
 
