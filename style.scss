@@ -1,121 +1,119 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .mainContainer {
   background-color: lightgray;
   border: 1px solid black;
   border-radius: 10px;
-  width: 60vw;
-  height: 60vh;
-  margin: 0 auto;
+  width: 800px;
+  height: 570px;
+  margin: 30px auto;
   text-align: center;
   background-image: url("./img/background-gif4.gif");
   background-repeat: no-repeat;
-  background-size: 60vw 43vh;
+  background-size: 800px 400px;
 
 
   .subContainer {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-    grid-template-areas: 
-    ". title title title ."
-    ". playerTxt text computerTxt ."
-    ". playerChar . computerChar ."
-    ". playerChar . computerChar ."
-    ". playerChar . computerChar ."
-    ". playerOutcome . computerOutcome ."
-    ". movesBtn . startBtn resetBtn"
-    // ". doc doc doc ."
-    ". . . audio ."
-    ;
-
     #title {
-      grid-area: title;
-      margin: 10px;
-      padding: 10px;
-      color: rgb(218, 134, 134);
+      margin: 10px auto;
+      
+
+      h1 {
+        color: rgb(218, 134, 134);
+        padding: 37px;
+      }
+      
+      img {
+        opacity: 0.8;
+      }
     }
   
-    #playerTxt {
-      grid-area: playerTxt;
+    #name {
+      display: flex;
+      justify-content: space-evenly;
       color: white;
       margin: 10px;
     }
     
-    #text {
-      grid-area: text;
-      color: white;
-    }
-
-    #computerTxt {
-      grid-area: computerTxt;
+    #score {
+      display: flex;
+      justify-content: space-evenly;
       color: white;
       margin: 10px;
     }
     
-    #playerChar {
-      grid-area: playerChar;
+    #Char {
+      display: flex;
+      justify-content: space-evenly;
+      
+      .character {
+        width: 130px;
+      }
+    }
+    
+    .outcome {
+      display: flex;
+      justify-content: space-evenly;
+
+      #playerOutcome {
+        margin: 10px;
+        padding: 10px;
+        color: white;
+      }
+  
+      #computerOutcome {
+        margin: 10px;
+        padding: 10px;
+        color: white;
+      }
+  
     }
 
-    #computerChar {
-      grid-area: computerChar;
-
+    #movesBtn {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "punch kick start reset"
+        "grapple block start reset";
+        grid-gap: 4px;
+        margin: 20px;
+        justify-self: center;
+        }
+  
+        .moveBtn {
+          border-radius: 5px;
+          width: 100px;
+  
+          &:hover {
+            cursor: pointer;
+            background-color: lightgray;
+            box-shadow: 1px 1px black;
+          }
+        }
       #kick {
+        grid-area: kick;
         width: 140px;
       }
       #grapple {
+        grid-area: grapple;
         width: 140px;
       }
       #punch{
+        grid-area: punch;
+        width: 140px;
+      }
+      #block {
+        grid-area: block;
         width: 140px;
       }
     }
 
-    .character {
-      width: 130px;
-    }
-
-    #playerOutcome {
-      grid-area: playerOutcome;
-      margin: 10px;
-      padding: 10px;
-      color: white;
-    }
-
-    #computerOutcome {
-      grid-area: computerOutcome;
-      margin: 10px;
-      padding: 10px;
-      color: white;
-    }
-
-
-    #movesBtn {
-      grid-area: movesBtn;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 4px;
-      margin: 20px;
-      justify-self: center;
-      }
-
-      .moveBtn {
-        border-radius: 5px;
-        width: 100px;
-
-        &:hover {
-          cursor: pointer;
-          background-color: lightgray;
-          box-shadow: 1px 1px black;
-        }
-      }
-      
-    }
-
     #resetBtn {
-      grid-area: resetBtn;
+      grid-area: reset;
       border-radius: 20px;
       width: 80px;
       height: 50px;
@@ -131,7 +129,7 @@
     }
 
     #startBtn {
-      grid-area: startBtn;
+      grid-area: start;
       border-radius: 20px;
       width: 80px;
       height: 50px;
@@ -146,22 +144,12 @@
       }
     }
 
-    #document {
-      grid-area: doc;
-      
-      img {
-        border: 1px solid black;
-        border-radius: 20px;     
-        background-color: black;
-      }
-
-    }
     #audioLevel {
-      grid-area: audio;
+    
       width: 200px;
       height: 20px;
     }
-  }
-
+  
+}
 
 

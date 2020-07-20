@@ -1,6 +1,7 @@
-const playerChar = document.getElementById("playerChar");
+const playerChar = document.getElementById("playerChar")
 const computerChar = document.getElementById("computerChar");
 const resetBtn = document.getElementById("resetBtn");
+const startBtn = document.getElementById("startBtn");
 
 const choicePunch = document.getElementById("punch");
 const choiceKick = document.getElementById("kick");
@@ -13,7 +14,7 @@ const draw = `<img src="./img/draw.png" id="draw" width="30px">`;
 
 const playerOutcome = document.getElementById("playerOutcome");
 const computerOutcome = document.getElementById("computerOutcome");
-const audio = document.getElementById("audio");
+// const audio = document.getElementById("audio");
 
 const playerPunch = `<img src="https://media.giphy.com/media/RGe2WI1YUvOjetdkn1/giphy.gif" class="character" id="punch">`;
 const playerKick = `<img src="https://media.giphy.com/media/ck0SSlByX8MFCdXurQ/giphy.gif" id="kick" width="140px">`;
@@ -177,39 +178,13 @@ resetBtn.addEventListener("click", function() {
   computerChar.innerHTML = computerStance;
   playerOutcome.innerHTML = "";
   computerOutcome.innerHTML = "";
-  document.getElementById("title").innerHTML = `<img src="./img/document.png" alt="document" width="400px">`;
+  document.getElementById("title").innerHTML = `<img src="./img/document1.png" alt="document" width="400px">`;
 
 });
-
-const audioLevel = document.getElementById("audioLevel");
-audio.volume = 0.1;
-
-const startBtn = document.getElementById("startBtn");
 
 startBtn.addEventListener("click", function(){
   document.getElementById("title").innerHTML = `<h1>Untitled Game (TBA)</h1>`;
 });
 
-//   document.getElementById("playerTxt").innerHTML = `<h2>Player</h2>`;
-//   document.getElementById("computerTxt").innerHTML = "<h2>Computer</h2>";
-//   document.getElementById("playerScore").innerHTML = 0;
-//   document.getElementById("computerScore").innerHTML = 0;
-
-// const winner = function () {
-// if (document.getElementById("playerScore") === 2) {
-//   playerChar.innerHTML = playerWin;
-//   computerChar.innerHTML = computerLose;
-// } else if (document.getElementById("computerScore") === 2) {
-//   playerChar.innerHTML = playerLose;
-//   computerChar.innerHTML = computerWin;
-//   }
-// };
-
-
-// const scoreCounter = function score(){
-  //   if(playerOutcome === win){
-    //     playerScore++;
-    //   } else if (computerOutcome === win) {
-      //     computerScore++;
-      //   }
-      // }
+const audioLevel = document.getElementById("audioLevel");
+audio.volume = 0.1;

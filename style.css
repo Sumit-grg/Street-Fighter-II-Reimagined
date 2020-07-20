@@ -1,118 +1,98 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .mainContainer {
   background-color: lightgray;
   border: 1px solid black;
   border-radius: 10px;
-  width: 60vw;
-  height: 60vh;
-  margin: 0 auto;
+  width: 800px;
+  height: 570px;
+  margin: 30px auto;
   text-align: center;
   background-image: url("./img/background-gif4.gif");
   background-repeat: no-repeat;
-  background-size: 60vw 43vh;
-}
-
-.mainContainer .subContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr 1fr 2fr 1fr;
-      grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-      grid-template-areas: ". title title title ." ". playerTxt text computerTxt ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerChar . computerChar ." ". playerOutcome . computerOutcome ." ". movesBtn . startBtn resetBtn" ". . . audio .";
+  background-size: 800px 400px;
 }
 
 .mainContainer .subContainer #title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-area: title;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px auto;
+}
+
+.mainContainer .subContainer #title h1 {
   color: #da8686;
+  padding: 37px;
 }
 
-.mainContainer .subContainer #playerTxt {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: playerTxt;
+.mainContainer .subContainer #title img {
+  opacity: 0.8;
+}
+
+.mainContainer .subContainer #name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   color: white;
   margin: 10px;
 }
 
-.mainContainer .subContainer #text {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: text;
-  color: white;
-}
-
-.mainContainer .subContainer #computerTxt {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
-  grid-area: computerTxt;
+.mainContainer .subContainer #score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   color: white;
   margin: 10px;
 }
 
-.mainContainer .subContainer #playerChar {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 2;
-  grid-area: playerChar;
+.mainContainer .subContainer #Char {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.mainContainer .subContainer #computerChar {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 4;
-  grid-area: computerChar;
-}
-
-.mainContainer .subContainer #computerChar #kick {
-  width: 140px;
-}
-
-.mainContainer .subContainer #computerChar #grapple {
-  width: 140px;
-}
-
-.mainContainer .subContainer #computerChar #punch {
-  width: 140px;
-}
-
-.mainContainer .subContainer .character {
+.mainContainer .subContainer #Char .character {
   width: 130px;
 }
 
-.mainContainer .subContainer #playerOutcome {
-  -ms-grid-row: 6;
-  -ms-grid-column: 2;
-  grid-area: playerOutcome;
+.mainContainer .subContainer .outcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.mainContainer .subContainer .outcome #playerOutcome {
   margin: 10px;
   padding: 10px;
   color: white;
 }
 
-.mainContainer .subContainer #computerOutcome {
-  -ms-grid-row: 6;
-  -ms-grid-column: 4;
-  grid-area: computerOutcome;
+.mainContainer .subContainer .outcome #computerOutcome {
   margin: 10px;
   padding: 10px;
   color: white;
 }
 
 .mainContainer .subContainer #movesBtn {
-  -ms-grid-row: 7;
-  -ms-grid-column: 2;
-  grid-area: movesBtn;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "punch kick start reset" "grapple block start reset";
   grid-gap: 4px;
   margin: 20px;
   -ms-grid-column-align: center;
@@ -131,10 +111,39 @@
           box-shadow: 1px 1px black;
 }
 
+.mainContainer .subContainer #kick {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: kick;
+  width: 140px;
+}
+
+.mainContainer .subContainer #grapple {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: grapple;
+  width: 140px;
+}
+
+.mainContainer .subContainer #punch {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: punch;
+  width: 140px;
+}
+
+.mainContainer .subContainer #block {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: block;
+  width: 140px;
+}
+
 .mainContainer #resetBtn {
-  -ms-grid-row: 7;
-  -ms-grid-column: 5;
-  grid-area: resetBtn;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: reset;
   border-radius: 20px;
   width: 80px;
   height: 50px;
@@ -154,9 +163,10 @@
 }
 
 .mainContainer #startBtn {
-  -ms-grid-row: 7;
-  -ms-grid-column: 4;
-  grid-area: startBtn;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: start;
   border-radius: 20px;
   width: 80px;
   height: 50px;
@@ -175,20 +185,7 @@
           box-shadow: 2px 2px black;
 }
 
-.mainContainer #document {
-  grid-area: doc;
-}
-
-.mainContainer #document img {
-  border: 1px solid black;
-  border-radius: 20px;
-  background-color: black;
-}
-
 .mainContainer #audioLevel {
-  -ms-grid-row: 8;
-  -ms-grid-column: 4;
-  grid-area: audio;
   width: 200px;
   height: 20px;
 }

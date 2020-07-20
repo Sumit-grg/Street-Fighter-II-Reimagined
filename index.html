@@ -10,34 +10,38 @@
   <div class="mainContainer">
     <div class="subContainer">
       <div id="title">
-        <img src="./img/document.png" alt="document" width="400px">
+        <img src="./img/document1.png" alt="document" width="400px">
       </div>
-      <div id="playerTxt">
+      <div id="name">
         <h2>Player</h2>
-        <p id="playerScore">0</p>
-      </div>
-      <p id="text">VS</p>
-      <div id="computerTxt">
         <h2>Computer</h2>
+      </div>
+      <div id="score">
+        <p id="playerScore">0</p>
         <p id="computerScore">0</p>
       </div>
-      <div id="playerChar">
-        <img src="./character animation/player-stance-loop.gif" class="character" alt="kick" id="playerStance">
-      </div>
-      <p id="audio"></p>
-      <div id="computerChar">
+      <div id="Char">
+        <div id="playerChar">
+          <img src="./character animation/player-stance-loop.gif" class="character" alt="kick" id="playerStance">
+        </div>
+        <div id="computerChar">
         <img src="./character animation/computer-stance-loop.gif"  class="character" alt="stance" id="computerStance">
+        </div>
       </div>
-      <p id="playerOutcome" class="outcome"></p>
-      <p id="computerOutcome" class="outcome"></p>
+      <div class="outcome">
+        <p id="playerOutcome" class="outcome"></p>
+        <p id="computerOutcome" class="outcome"></p>
+      </div>
       <div id="movesBtn">
         <button class="moveBtn" id="punch">Punch</button>
         <button class="moveBtn" id="kick">Kick</button>
         <button class="moveBtn" id="grapple">Grapple</button>
         <button class="moveBtn" id="block">Block</button>
+        <button id="startBtn">start</button>
+        <button id="resetBtn">Reset</button>
       </div>
-      <button id="startBtn">start</button>
-      <button id="resetBtn">Reset</button>
       <audio id="audioLevel" autoplay loop controls><source src="./audio/ryu theme.mp3" type="audio/mp3"></audio>
+    </div>
+  </div>
 </body>
 </html>
