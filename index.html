@@ -1,48 +1,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <link rel='icon' href='./img/win.png' type='image/x-icon'>
-  <script src="./main.js" type="module"></script>
-  <title>street fighter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPS JS ver</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel='icon' href='./img/ryu-win-display.png' type='image/x-icon' >
 </head>
-<body>
-  <div class="mainContainer">
-    <div class="subContainer">
-      <div id="title">
-        <img src="./img/document1.png" alt="document" width="400px">
-      </div>
-      <div id="name">
-        <h2>Player</h2>
-        <h2>Computer</h2>
-      </div>
-      <div id="score">
-        <p id="playerScore">0</p>
-        <p id="computerScore">0</p>
-      </div>
-      <div id="Char">
-        <div id="playerChar">
-          <img src="./character animation/player-stance-loop.gif" class="character" alt="kick" id="playerStance">
+<body>  
+  <main>
+    <div class="mainContainer">
+      <div class="healthbarContainer">
+        <div class="healthbarPlayer">
+          <div id="HitbarPlayer"></div>
         </div>
-        <div id="computerChar">
-        <img src="./character animation/computer-stance-loop.gif"  class="character" alt="stance" id="computerStance">
+        <img src="./img/vs.png" alt="vs" id="vs">
+        <div class="healthbarComputer">
+          <div class="" id=HitbarComputer></div>
         </div>
       </div>
-      <div class="outcome">
-        <p id="playerOutcome" class="outcome"></p>
-        <p id="computerOutcome" class="outcome"></p>
+      <div class="nameContainer">
+        <div class="nameScore">
+          <div class="nameFlex1">
+            <span id="playerDP">
+              <img src="./img/ryu-win-display.png" id="dp" alt="">
+            </span>
+            <img src="./img/ryu.png" id="ryu" alt="ryu"> 
+          </div >
+          <h2 id="player_score"></h2>
+          <h2 id="player_count"><img src="./img/num0.png" alt=""></h2>
+        </div>
+        <div class="nameScore">
+          <h2 id="computer_count"><img src="./img/num0.png" alt=""></h2>
+          <h2 id="computer_score"></h2>
+          <div class="nameFlex2">
+            <img src="./img/mbison.png" id="bison" alt="bison"> 
+            <span id="computerDP">
+              <img src="./img/bison-win-display.png" id="dp" alt="">;
+            </span>
+          </div>
+        </div>
       </div>
-      <div id="movesBtn">
-        <button class="moveBtn" id="punch">Punch</button>
-        <button class="moveBtn" id="kick">Kick</button>
-        <button class="moveBtn" id="grapple">Grapple</button>
-        <button class="moveBtn" id="block">Block</button>
-        <!-- <button id="startBtn">start</button> -->
-        <button id="resetBtn">Reset</button>
+      <div class="startScreen" id="startScreen">
       </div>
-      <audio id="audioLevel" autoplay loop controls><source src="./audio/ryu theme.mp3" type="audio/mp3"></audio>
+      <div id="gameManaul">        
+      </div>
+      <button id="next">BACK</button>
+      <div class="roundNoti" id="roundNoti">  
+      </div>
+      <div class="RPSDisplayContainer">
+        <div class="display player" id="playerDisplay">
+          <img src="./animation/play-stance-loop1.gif" class="gifImg" alt="">
+        </div>
+        <div class="display computer" id="computerDisplay" >
+          <img src="./animation/com-stance-loop1.gif" class="gifImg" alt="">
+        </div>
+      </div>
+      <div class="moveNames">
+        <div class=playerMoves>
+          <span id="pMove">Stance</span> <span id="pResult"></span>
+        </div>
+        <div class="computerMoves">
+          <span id="cMove">Stance</span><span id="cResult"></span>
+        </div>
+      </div>
+      <div id="clickStart">
+        <img src="./img/street-fighter.png" id="startLogo" alt="">
+      </div>
+      <div class="bottomContainer">
+        <div class="btn moves" id="btn">
+          <button class="button hover" id="punch">Punch</button>
+          <button class="button hover" id="kick">Kick</button>
+          <button class="button hover" id="grapple">Grapple</button>
+          <button class="button hover" id="block">Block</button>
+        </div>
+        <div class="btn fight" id="btnRight">
+          <button class="button hover" id="fight">Fight</button>
+          <button class="button hover" id="doc">Guide</button>
+          <div class="audio vol play">
+            <button class="btn hover" id="volDown"><i class="fas fa-volume-down fa-2x"></i></button>
+            <button class="btn hover" id="volUp"><i class="fas fa-volume-up fa-2x"></i></button>
+            <button class="btn hover" id="play"><i class="fas fa-play-circle fa-2x"></i></button>
+            <button class="btn hover" id="pause"><i class="fas fa-pause-circle fa-2x"></i></button>
+          </div>            
+        </div>
+      </div>
     </div>
   </div>
-</body>
+    <button id="resetBtn">RESET</button>
+    <iframe src="./audio/silence.mp3" type="audio/mpeg" allow="autoplay" id="iframe"></iframe>
+    <div class="audioContainer">
+      <audio id="audio" autoplay loop>
+        <source src="./audio/bison-theme.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    <footer>© Sumit Gurung 2021</footer>
+  </main> 
+</body> 
+<script type="module" src="main.js"></script>
 </html>
