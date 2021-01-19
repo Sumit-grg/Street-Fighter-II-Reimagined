@@ -13,7 +13,9 @@ Documentation:
 
 <img src="./img/manaul2.jpg" width="750px" alt="manaul_two">
 
-Future Update ??
+
+
+Future Updates ??
 
 -Ability to select multiple characters.
 
