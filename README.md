@@ -2,7 +2,7 @@
 
 Street Fighter II, 90s aracde classic now re-imagined and designed based on Rock-Paper-Scissors format.
 
-<img src="./img/ryu-intro.gif" alt="">
+<img src="./img/ryu-intro.gif" width="350px" alt="">
 
 Documentation:
 
