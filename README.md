@@ -4,6 +4,6 @@ Street Fighter II, 90s aracde classic now re-imagined and designed based on Rock
 
 Documentation:
 
-https://github.com/Sumit-grg/Street-Fighter-II-Reimagined/blob/master/img/manaul.jpg
+<img src="./img/manaul.jpg" width="800px" alt="manaul_one">
 
-https://github.com/Sumit-grg/Street-Fighter-II-Reimagined/blob/master/img/manaul2.jpg
+<img src="./img/manaul2.jpg" width="800" alt="manaul_two">
